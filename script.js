@@ -13,6 +13,8 @@ function compute() {
     if(principal <= 0){
         alert("Enter a positive number")
         document.getElementById("principal").focus()
+    } else if (years <= 0){
+        alert("Select year")
     } else {
         // Append required result lines
         result.innerHTML += `

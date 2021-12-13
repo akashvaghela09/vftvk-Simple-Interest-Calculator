@@ -85,9 +85,9 @@ b {
 }
 
 .show {
-    visibility: visible;
+    display: inline-block;
 }
 
 .hide {
-    visibility: hidden;
+    display: none;
 }
