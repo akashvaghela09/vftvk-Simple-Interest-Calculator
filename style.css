@@ -74,7 +74,7 @@ h1 {
     margin-left: 10px;
 }
 
-#submitButton, #result {
+#submitButton, #resetButton, #result {
     margin-left: 20px;
     margin-bottom: 10px;
     padding: 5px;
@@ -82,4 +82,12 @@ h1 {
 
 b {
     background-color: yellow;
+}
+
+.show {
+    visibility: visible;
+}
+
+.hide {
+    visibility: hidden;
 }
