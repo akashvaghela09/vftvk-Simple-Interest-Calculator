@@ -1,4 +1,74 @@
-body {background-color:tan;}
-h1{color:green;}
+* {
+    margin: 0px;
+    padding: 0px;
+}
 
+body {
+    padding: 0px;
+    margin: 0px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100vw;
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+}
 
+.container {
+    background-color: white;
+    border-radius: 20px;
+    padding: 50px 50px 30px 50px;
+    width: 30vw;
+    height: fit-content;
+    position: relative;
+}
+
+.copyright {
+    position: absolute;
+    bottom: 10px;
+    margin: 0px;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+}
+.wrapper > section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.inputTagSection {
+    width: 30%;
+}
+
+.inputSection {
+    width: 60%;
+    
+}
+.inputTagSection > p, .pageInput {
+    margin: 10px;
+    width: 80%;
+}
+
+#rateInput {
+    display: flex;
+    width: 100%;
+}
+
+#rateInput > input  {
+    width: 80%;
+}
+
+#rateValue {
+    margin-left: 10px;
+}
+
+#submitButton, #result {
+    margin-left: 20px;
+    margin-bottom: 10px;
+    padding: 5px;
+}
