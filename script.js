@@ -1,36 +1,38 @@
 function compute() {
     // get all the elements
-    principal = document.getElementById("principal").value;
-    rate = document.getElementById("rate").value;
-    year = document.getElementById("year").value;
-    result = document.getElementById("result");
+    let principal = document.getElementById("principal").value;
+    let rate = document.getElementById("rate").value;
+    let years = document.getElementById("year").value;
+    let result = document.getElementById("result");
+    let finalYear = new Date().getFullYear()+parseInt(years);
     
-    // Remove Previous values from result
-    result.innerHTML = ""
+    clearResult()
     
-    // create required elements
-    currentPrincipal = document.createElement("p")
-    currentRate = document.createElement("p")
-    finalAmount = document.createElement("p")
-    finalYear = document.createElement("p")
-    
-    // set values
-    currentPrincipal.textContent = `If you deposite ${principal}.`
-    currentRate.textContent = `at an Interest rate of ${rate}%`
-    finalAmount.textContent = `You will recieve an amount of ${(principal * rate * year)/100}`
-    finalYear.textContent = `in the year ${2021 + Number(year)}`
-    
-    // Append required result lines one by one
-    result.appendChild(currentPrincipal)
-    result.appendChild(currentRate)
-    result.appendChild(finalAmount)
-    result.appendChild(finalYear)
+    if(principal <= 0){
+        alert("Enter a positive number")
+        document.getElementById("principal").focus()
+    } else {
+        // Append required result lines
+        result.innerHTML += `
+            <p>If you deposite <b>${principal}</b>.</p>
+            <p>at an Interest rate of <b>${rate}%</b></p>
+            <p>You will recieve an amount of <b>${(principal * rate * years)/100}</b></p>
+            <p>in the year <b>${finalYear}</b></p>
+        ` 
+    }
 }
         
 function changeValue() {
-    let rateValue = document.getElementById("rateValue")
+    let rateValue = document.getElementById("rate_val")
     let inputValue = document.getElementById("rate").value;
     
     // chage the current rate % for input range
     rateValue.textContent = inputValue + "%";
+}
+
+function clearResult() {
+    let result = document.getElementById("result");
+    
+    // Remove Previous values from result
+    result.innerHTML = ""
 }
